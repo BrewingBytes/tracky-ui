@@ -1,0 +1,28 @@
+name: "Merge Requests Chores"
+on:
+  pull_request
+
+jobs:
+  labeler:
+    name: "Labeler"
+    permissions:
+      contents: read
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/labeler@v5
+        with:
+          sync-labels: true
+
+  assigner:
+    name: "Assigner"
+    permissions:
+      contents: read
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: kentaro-m/auto-assign-action@v2.0.0
+        with:
+          configuration-path: '.github/assigner-config.yml'
+
+    
