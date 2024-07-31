@@ -1,0 +1,20 @@
+feature:
+  - head-branch: ['^feature', 'feature', '^feat', 'feat']
+
+fix:
+  - head-branch: ['^fix', 'fix']
+
+workflows:
+  - changed-files:
+    - any-glob-to-any-file:
+      - .github/*
+
+tauri:
+  - changed-files:
+    - any-glob-to-any-file:
+      - src-tauri/*
+
+vue:
+  - changed-files:
+    - any-glob-to-any-file:
+      - src/*
