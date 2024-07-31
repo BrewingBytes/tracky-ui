@@ -10,7 +10,7 @@
     "tauri": "tauri"
   },
   "dependencies": {
-    "@mdi/font": "5.9.55",
+    "@mdi/font": "7.4.47",
     "@tauri-apps/api": "^1",
     "roboto-fontface": "*",
     "vue": "^3.3.4",
